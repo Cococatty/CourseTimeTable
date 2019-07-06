@@ -5,7 +5,7 @@ shinyServer(function(input, output) {
     
     storeItems <- eventReactive(input$AddItems
                                 , addItemToDB(input$CourseCode, input$CourseDays, input$StartTime
-                                              , input$EndTime, input$Freq, input$cost))
+                                              , input$EndTime, input$Freq, input$Cost))
     
     updatedTable <- eventReactive(input$ShowTable, {
 
